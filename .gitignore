@@ -1,0 +1,53 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# MemoryCaptures
+[Mm]emoryCaptures/
+
+# Asset meta data should be tracked
+# But auto-generated meta files should be ignored
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity crash reports
+sysinfo.txt
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Rider / VS / VSCode
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb.meta
+*.pdb.meta
+
+# Builds
+*.apk
+*.aab
+*.exe
+*.app
+
+# Addressables
+Assets/AddressableAssetsData/*/*.bin*
+
+# Gradle
+.gradle/
