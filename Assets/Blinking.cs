@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Blinking : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+
+    [Tooltip("Time between blink on/off")]
+    public float blinkInterval = 0.1f;
+
+    private float nextBlinkTime;
 
     void Awake()
     {
@@ -13,12 +19,18 @@ public class Blinking : MonoBehaviour
             Debug.LogError(
                 "Blinking script must be attached to a GameObject with SpriteRenderer!"
             );
-            enabled = false; // TẮT SCRIPT để tránh spam lỗi
+            enabled = false;
         }
     }
 
     void Update()
     {
-        spriteRenderer.enabled = !spriteRenderer.enabled;
+        if (!spriteRenderer) return;
+
+        if (Time.time >= nextBlinkTime)
+        {
+            spriteRenderer.enabled = !spriteRenderer.enabled;
+            nextBlinkTime = Time.time + blinkInterval;
+        }
     }
 }
