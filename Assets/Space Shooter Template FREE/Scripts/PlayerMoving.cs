@@ -14,13 +14,21 @@ public class Borders
     [HideInInspector] public float minX, maxX, minY, maxY;
 }
 
+<<<<<<< HEAD
 public class PlayerMoving : MonoBehaviour
 {
+=======
+public class PlayerMoving : MonoBehaviour {
+>>>>>>> 6cfbf4a239524dbe365ec44c9510a4081ca346d7
 
     [Tooltip("offset from viewport borders for player's movement")]
     public Borders borders;
     Camera mainCamera;
+<<<<<<< HEAD
     bool controlIsActive = true;
+=======
+    bool controlIsActive = true; 
+>>>>>>> 6cfbf4a239524dbe365ec44c9510a4081ca346d7
 
     public static PlayerMoving instance; //unique instance of the script for easy access to the script
 
@@ -70,7 +78,11 @@ public class PlayerMoving : MonoBehaviour
     }
 
     //setting 'Player's' movement borders according to Viewport size and defined offset
+<<<<<<< HEAD
     void ResizeBorders()
+=======
+    void ResizeBorders() 
+>>>>>>> 6cfbf4a239524dbe365ec44c9510a4081ca346d7
     {
         borders.minX = mainCamera.ViewportToWorldPoint(Vector2.zero).x + borders.minXOffset;
         borders.minY = mainCamera.ViewportToWorldPoint(Vector2.zero).y + borders.minYOffset;
